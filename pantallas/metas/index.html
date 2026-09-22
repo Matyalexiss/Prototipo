@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>MenteSerena</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#c5e7ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#2e1500", "primary-container": "#587b6d", "outline": "#717974", "on-secondary": "#ffffff", "tertiary-fixed": "#ffdcc1", "inverse-surface": "#2e3131", "surface-container-highest": "#e1e3e2", "on-tertiary-fixed-variant": "#6c3a00", "surface-container-low": "#f2f4f3", "secondary-container": "#c1e4fd", "primary-fixed": "#c5ebda", "tertiary-fixed-dim": "#ffb779", "background": "#f8faf9", "on-secondary-fixed-variant": "#284b5e", "on-tertiary": "#ffffff", "inverse-primary": "#a9cfbe", "outline-variant": "#c1c8c3", "on-primary": "#ffffff", "surface-container-high": "#e6e9e8", "on-background": "#191c1c", "inverse-on-surface": "#eff1f0", "on-surface": "#191c1c", "surface-dim": "#d8dada", "on-primary-container": "#effff6", "surface-bright": "#f8faf9", "on-tertiary-container": "#fffaf8", "tertiary-container": "#a56423", "secondary-fixed-dim": "#a8cbe3", "primary": "#406255", "surface-container": "#eceeed", "on-secondary-container": "#45677b", "on-error": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "on-primary-fixed": "#002117", "tertiary": "#874c0a", "error-container": "#ffdad6", "surface-variant": "#e1e3e2", "secondary": "#416277", "on-primary-fixed-variant": "#2b4d41", "on-secondary-fixed": "#001e2d", "surface-tint": "#436558", "on-surface-variant": "#414845", "primary-fixed-dim": "#a9cfbe", "surface": "#f8faf9" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-lg": "1.75rem", "space-xl": "2.5rem", "space-xs": "0.375rem", "space-md": "1.25rem", "margin": "1.5rem", "gutter": "1.25rem", "space-sm": "0.75rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "label-lg": ["15px", { lineHeight: "20px", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }], "body-lg": ["17px", { lineHeight: "26px", fontWeight: "400" }], "display": ["34px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8faf9;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Regresar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Logo MenteSerena" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XtENI_SwdHcw4dERdXGenNpjW-im8SV40J36mXBOjhK3Q-_N8lt11ANA9Pozx1mI21NAJafB8-FpVZf-eDZJ-YjOM044Ytm3GZkRJAMrcGe290_9e-ugPb8G_zWnPV_9dFTFNVoViDFYd8O1IT0N5a9XLmsCFc6SqJDrXZQ4olXEvPwsQw87iOdK_Ysb8yte0_1Tj0_jzSUGRhN25aWGNSu3YOcgUyeIlrssh9NGDMsfeDhlgVN4JWCQ"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Soporte Crisis</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(64,98,85,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNpJrrVtT1JjepYrb5tkzlZMNAXfsvbGbv0Th08VpKQv31bVxocg6HzCu0N73h8jXGmhu77VWH-5BVcmpld32gxgDbk3hHTHbO8u4JjZmgD6tggx-ZGgaWDzhqolkaOKQTG8XyFC0GKeVS5YRd4eX3mi8wwTyGCghTs2VwjkDZCv79KDd1S9paG7JORrkkKkoRxLKosTjLu_cA7vcg5gsnxTUZm5wnmRiGQr6k15EKZ-3LFMfLYY"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-margin pb-space-xl gap-space-md">
+<!-- Header Contextual -->
+<section class="flex flex-col pt-space-xs">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-primary text-[18px]">psychology_alt</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Plan de Intervención Clínica</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Mis Metas y Evolución</h2>
+<div class="flex items-center gap-2 mt-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>3 Metas Activas • 68% Progreso Promedio</span>
+</div>
+</div>
+</section>
+<!-- Tabs de Enfoque Terapéutico (Scroll horizontal suave) -->
+<section class="-mx-margin px-margin overflow-x-auto no-scrollbar flex items-center gap-2 py-1 select-none">
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm whitespace-nowrap transition-transform active:scale-95">
+      Todos los Enfoques
+    </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest whitespace-nowrap transition-colors">
+      Cognitivo-Conductual (TCC)
+    </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest whitespace-nowrap transition-colors">
+      Dialéctico-Conductual (DBT)
+    </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest whitespace-nowrap transition-colors">
+      EMDR
+    </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest whitespace-nowrap transition-colors">
+      Terapia Familiar
+    </button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest whitespace-nowrap transition-colors">
+      Reinserción Sociolaboral
+    </button>
+</section>
+<!-- Curva de Evolución Clínica (SRS-FUN-016) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_8px_24px_rgba(32,45,39,0.04)] flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span class="font-label-md text-label-md uppercase tracking-wide">Curva de Atenuación del Síntoma</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Evolución hacia la Meta Conductual</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+        Semana 8 de 12
+      </span>
+</div>
+<!-- Gráfico Vectorial Inline Suave y Orgánico -->
+<div class="w-full h-36 relative mt-1 flex items-end">
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 320 120">
+<defs>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#587B6D" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#587B6D" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="lineGradient" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#874C0A"></stop>
+<stop offset="50%" stop-color="#416277"></stop>
+<stop offset="100%" stop-color="#406255"></stop>
+</lineargradient>
+</defs>
+<!-- Línea base horizontal punteada -->
+<line opacity="0.6" stroke="#C1C8C3" stroke-dasharray="4 4" stroke-width="1.2" x1="0" x2="320" y1="20" y2="20"></line>
+<!-- Línea objetivo conductual punteada -->
+<line opacity="0.6" stroke="#406255" stroke-dasharray="4 4" stroke-width="1.2" x1="0" x2="320" y1="95" y2="95"></line>
+<!-- Área sombreada bajo la curva -->
+<path d="M 0,22 Q 80,30 140,55 T 260,82 L 320,95 L 320,120 L 0,120 Z" fill="url(#areaGradient)"></path>
+<!-- Curva de evolución de intensidad sintomática -->
+<path d="M 0,22 Q 80,30 140,55 T 260,82 L 320,95" stroke="url(#lineGradient)" stroke-linecap="round" stroke-width="3"></path>
+<!-- Nodos clave -->
+<circle cx="0" cy="22" fill="#874C0A" r="4.5"></circle>
+<circle cx="140" cy="55" fill="#416277" r="4"></circle>
+<circle class="animate-pulse" cx="260" cy="82" fill="#406255" r="5"></circle>
+<circle cx="320" cy="95" fill="#406255" r="4.5" stroke="#FFFFFF" stroke-width="2"></circle>
+</svg>
+<!-- Etiquetas de referencia en eje vertical -->
+<div class="absolute left-1 top-2 font-label-sm text-label-sm text-tertiary">Línea Base: 8 ep/sem</div>
+<div class="absolute right-1 bottom-1 font-label-sm text-label-sm text-primary font-medium">Meta: ≤ 2 ep/sem</div>
+</div>
+<!-- Indicador de firma clínica -->
+<div class="flex items-center justify-between pt-2 border-t-0 bg-surface-container-low rounded-xl px-3 py-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm">
+          RT
+        </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Psic. Rodrigo Tapia • T.O. Camila Soto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Última validación clínica hace 2 días</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+</div>
+</section>
+<!-- Listado Detallado de Metas Clínicas -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Metas Terapéuticas en Curso</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 activas</span>
+</div>
+<!-- Meta 1: TCC -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_8px_24px_rgba(32,45,39,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm self-start">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>Cognitivo-Conductual (TCC)</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+            Reestructuración Cognitiva ante Pensamientos Catastróficos
+          </h4>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">75%</span>
+<span class="font-label-sm text-label-sm text-primary">En avance positivo</span>
+</div>
+</div>
+<!-- Barra de Progreso -->
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 75%;"></div>
+</div>
+<!-- Comparativa Línea Base vs Meta -->
+<div class="grid grid-cols-1 gap-2 bg-surface-container-low p-3 rounded-DEFAULT">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">flag</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Línea Base Inicial</span>
+<span class="font-body-sm text-body-sm text-on-surface">Frecuencia de 8 episodios intrusivos/semana con ansiedad 8/10.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-medium">Meta Establecida</span>
+<span class="font-body-sm text-body-sm text-on-surface">Reducir a ≤ 2 episodios/semana utilizando técnica de registro conductual.</span>
+</div>
+</div>
+</div>
+<!-- Datos de sesión y acción rápida -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Martes 11:00 hrs (Semanal)</span>
+</div>
+<button class="px-3.5 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Registrar Avance</span>
+</button>
+</div>
+</article>
+<!-- Meta 2: DBT -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_8px_24px_rgba(32,45,39,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm self-start">
+<span class="material-symbols-outlined text-[14px]">self_improvement</span>
+<span>Dialéctico-Conductual (DBT) • Regulación Emocional</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+            Habilidades TIPP para Tolerancia al Malestar
+          </h4>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-secondary">60%</span>
+<span class="font-label-sm text-label-sm text-secondary">Progreso constante</span>
+</div>
+</div>
+<!-- Barra de Progreso -->
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 60%;"></div>
+</div>
+<!-- Comparativa Línea Base vs Meta -->
+<div class="grid grid-cols-1 gap-2 bg-surface-container-low p-3 rounded-DEFAULT">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">flag</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Línea Base Inicial</span>
+<span class="font-body-sm text-body-sm text-on-surface">Desregulación emocional con impulsividad ante conflicto interpersonal.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-medium">Meta Establecida</span>
+<span class="font-body-sm text-body-sm text-on-surface">Aplicar protocolo de respiración diafragmática y cambio de temperatura previo a responder.</span>
+</div>
+</div>
+</div>
+<!-- Datos de sesión y acción rápida -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Frecuencia Quincenal</span>
+</div>
+<button class="px-3.5 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+<span>Ver Bitácora</span>
+</button>
+</div>
+</article>
+<!-- Meta 3: Reinserción Sociolaboral -->
+<article class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_8px_24px_rgba(32,45,39,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm self-start">
+<span class="material-symbols-outlined text-[14px]">work_history</span>
+<span>Terapia Ocupacional</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+            Retorno Progresivo a Rutinas Ocupacionales y Autocuidado
+          </h4>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary">70%</span>
+<span class="font-label-sm text-label-sm text-primary">Consolidado</span>
+</div>
+</div>
+<!-- Barra de Progreso -->
+<div class="w-full bg-surface-container rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 70%;"></div>
+</div>
+<!-- Comparativa Línea Base vs Meta -->
+<div class="grid grid-cols-1 gap-2 bg-surface-container-low p-3 rounded-DEFAULT">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">flag</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Línea Base Inicial</span>
+<span class="font-body-sm text-body-sm text-on-surface">Aislamiento en habitación &gt;14 horas diarias sin actividad estructurada.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-medium">Meta Establecida</span>
+<span class="font-body-sm text-body-sm text-on-surface">Cumplimiento de bloque matutino de 3 horas de actividades significativas fuera del hogar.</span>
+</div>
+</div>
+</div>
+<!-- Datos de sesión y profesional -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span>Semanal con T.O. Camila Soto</span>
+</div>
+<button class="px-3.5 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Registrar Bloque</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Sección de Propuesta Colaborativa (SRS-FUN-016) -->
+<section class="bg-surface-container rounded-lg p-space-md flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Construcción Colaborativa</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Las metas se definen en conjunto durante tus sesiones psicoterapéuticas. Puedes proponer una nueva meta o nota reflexiva a tu especialista para evaluarla en tu próximo encuentro.
+        </p>
+</div>
+</div>
+<button class="w-full mt-1 py-3.5 px-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_8px_16px_rgba(88,123,109,0.2)] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Proponer Meta o Nota para Próxima Sesión</span>
+</button>
+</section>
+<!-- Resguardo y Ética Clínica (SRS-NFU-001) -->
+<footer class="flex items-center gap-2.5 px-3 py-2 rounded-DEFAULT bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0">lock</span>
+<p class="font-label-sm text-label-sm leading-relaxed">
+      Los planes de intervención psicoterapéutica están protegidos bajo secreto profesional y estricta confidencialidad clínica según la norma <span class="font-medium text-on-surface">SRS-NFU-001</span>.
+    </p>
+</footer>
+</div></main>  <script src="../../scripts/navigation.js"></script>
+</body></html>

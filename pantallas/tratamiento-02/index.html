@@ -1,0 +1,463 @@
+<!DOCTYPE html><html class="h-full bg-surface" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<title>MenteSerena - Historial Farmacéutico</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#436558",
+            "on-primary-fixed": "#002117",
+            "inverse-on-surface": "#eff1f0",
+            "primary-fixed-dim": "#a9cfbe",
+            "secondary-fixed-dim": "#a8cbe3",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#414845",
+            "surface-container-low": "#f2f4f3",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#e1e3e2",
+            "inverse-surface": "#2e3131",
+            "on-error-container": "#93000a",
+            "secondary-container": "#c1e4fd",
+            "tertiary-fixed-dim": "#ffb779",
+            "on-tertiary-container": "#fffaf8",
+            "tertiary-container": "#a56423",
+            "outline": "#717974",
+            "outline-variant": "#c1c8c3",
+            "surface-dim": "#d8dada",
+            "tertiary-fixed": "#ffdcc1",
+            "primary": "#406255",
+            "on-tertiary": "#ffffff",
+            "surface": "#f8faf9",
+            "inverse-primary": "#a9cfbe",
+            "on-tertiary-fixed-variant": "#6c3a00",
+            "on-primary-fixed-variant": "#2b4d41",
+            "error": "#ba1a1a",
+            "background": "#f8faf9",
+            "on-secondary-fixed-variant": "#284b5e",
+            "on-surface": "#191c1c",
+            "on-secondary-container": "#45677b",
+            "surface-container-high": "#e6e9e8",
+            "primary-fixed": "#c5ebda",
+            "secondary": "#416277",
+            "primary-container": "#587b6d",
+            "on-secondary-fixed": "#001e2d",
+            "surface-bright": "#f8faf9",
+            "on-primary-container": "#effff6",
+            "surface-container": "#eceeed",
+            "surface-container-highest": "#e1e3e2",
+            "on-background": "#191c1c",
+            "on-tertiary-fixed": "#2e1500",
+            "tertiary": "#874c0a",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "secondary-fixed": "#c5e7ff"
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.375rem",
+            "gutter": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "1.75rem",
+            "margin": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display": ["Plus Jakarta Sans"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #f8faf9;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 16px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 16px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased">
+<!-- Header Superior -->
+<header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-md pt-safe border-b border-surface-container shadow-sm">
+<div class="h-16 px-4 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<button aria-label="Volver a Inicio" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button><img alt="Logo" class="object-cover rounded-lg flex-shrink-0 shadow-sm w-10 h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD4PA09C2byFrRv9P4raUTqCXCRZ10T9j_R--ly8o_Ha-Wb7bphXMqXkHdBLNDdF-rEeYtDXdgvFHBhosXzlhJ4a3PZzu_A1Fyb99VhT1X5QC1S20mSYeGk6-0hJJrjUTQvvOekkK1Ns8TEqawh-KeYhtO2aXAy48i1-wX39BrB4etSk2xt2JoJSt5CfkEsOg8zgjtdpqYFUmbmUrsY6dTGuvz6cMQ2qYfXQSeYMBaVdBBp5dw9yE80QHEAALhLb8l">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h1 class="text-[17px] font-bold text-on-surface leading-snug">Historial Farmacéutico</h1>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-primary-fixed text-on-primary-fixed">SRS-FUN-002</span>
+</div>
+<p class="text-[12px] text-on-surface-variant leading-none">Control de Adherencia y Tratamientos</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="relative"><a href="#" aria-label="Ir a Mi Perfil y Configuración" data-screen="perfil" onclick="/* navigate to SCREEN_18 */ return false;" class="block relative rounded-full active:scale-95 transition-all cursor-pointer"><img alt="Foto de perfil de Camila" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTI0EEaKu3wi4FXiLUSs4_cuIrSCyCqZ6_wPBp9D1sfkgQYld4LVrRZqyczYcwRMWfQ2cqxh_L0-0g62swHT93ix5_uO0VVw8l-7wneZ558oAViMVhuwUKVO9sSkvxVHfg0gVwnqcy3kBdTX4qX-hGMs7QARupO8A4skVRbqd2tLp8ZKIvWyVfTy0D0rVWul0SbrjXHgxjRgOpRBG9Bpa0F4umqJWjUEkme4Yd_K5gD5Oio63862O4r6j9pg3QqmWF"><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface"></span></a></div>
+</div>
+</div>
+</header>
+<!-- Contenido Principal -->
+<main class="flex-1 w-full max-w-md mx-auto pt-20 pb-36 px-4 space-y-4">
+<!-- Alerta de Seguridad Clínica Destacada (SRS-FUN-008) -->
+<section class="rounded-2xl p-4 bg-emerald-50/80 border border-emerald-200/70 shadow-sm relative overflow-hidden">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1 flex-wrap">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Seguridad Clínica Activa</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-full bg-white/80 text-emerald-800 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              SRS-FUN-008
+            </span>
+</div>
+<h2 class="text-sm font-bold text-emerald-950">Control de Interacciones Críticas Activo</h2>
+<p class="text-xs text-emerald-800 mt-1 leading-relaxed">
+            Verificación algorítmica en tiempo real: <span class="font-semibold">Sin incompatibilidad IMAO + ISRS</span> detectada. Protección contra síndrome serotoninérgico activa.
+          </p>
+</div>
+</div>
+</section>
+<!-- Métrica de Adherencia Semanal -->
+<section class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-container">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="text-[11px] font-semibold text-primary uppercase tracking-wider">Seguimiento Semanal</span>
+<h3 class="text-base font-bold text-on-surface">Adherencia Terapéutica</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-primary-fixed text-on-primary-fixed">
+          Semana Actual
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3.5 flex items-center gap-4">
+<!-- Indicador circular estilizado verde bosque -->
+<div class="relative w-16 h-16 flex items-center justify-center flex-shrink-0">
+<svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="66, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="text-sm font-bold text-primary leading-none">66%</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1.5">
+<p class="text-xs font-semibold text-on-surface">66% de tomas a tiempo</p>
+<span class="text-[11px] text-on-surface-variant">2 de 3 tomas hoy</span>
+</div>
+<!-- Barra lineal de progreso complementaria -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 66%;"></div>
+</div>
+<p class="text-[11px] text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            Buen nivel de continuidad farmacológica
+          </p>
+</div>
+</div>
+</section>
+<!-- Tratamiento Farmacológico Activo -->
+<section class="space-y-3">
+<div class="flex items-center justify-between px-1">
+<div>
+<h3 class="text-base font-bold text-on-surface">Tratamiento Farmacológico Activo</h3>
+<p class="text-[12px] text-on-surface-variant">Prescripciones vigentes y pauta horaria</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">3 Fármacos</span>
+</div>
+<!-- Fármaco 1: Sertralina 50 mg -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-container space-y-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold">
+                Receta Retenida
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Vence receta en 14 días
+              </span>
+</div>
+<h4 class="text-base font-bold text-on-surface">Sertralina 50 mg</h4>
+<p class="text-xs text-on-surface-variant">ISRS · 1 comprimido matutino con desayuno (08:30 AM)</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-bold">Estado: Tomada hoy</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">08:30 AM · Registrado</span>
+</div>
+</article>
+<!-- Fármaco 2: Quetiapina 25 mg -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-container space-y-3" id="card-quetiapina">
+<div class="flex items-start justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold">
+                Receta Simple
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px]">
+                Noche
+              </span>
+</div>
+<h4 class="text-base font-bold text-on-surface">Quetiapina 25 mg</h4>
+<p class="text-xs text-on-surface-variant">1 comprimido nocturno antes de dormir (22:00 hrs)</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200/60 flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-amber-900">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+<span class="text-xs font-bold" id="status-quetiapina-text">Estado: Pendiente</span>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold shadow-sm hover:bg-primary-container active:scale-95 transition-all flex items-center gap-1" id="btn-quetiapina-action" onclick="toggleQuetiapina()">
+<span class="material-symbols-outlined text-[16px]">done</span>
+<span class="">Marcar tomada</span>
+</button>
+</div>
+</article>
+<!-- Fármaco 3: Clonazepam 0.5 mg SOS -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-container space-y-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-semibold">
+                Rescate SOS
+              </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-medium">
+                Receta Cheque
+              </span>
+</div>
+<h4 class="text-base font-bold text-on-surface">Clonazepam 0.5 mg</h4>
+<p class="text-xs text-on-surface-variant">Rescate SOS sublingual en caso de crisis de pánico.</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed-dim/40 flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<span class="text-xs font-medium text-on-surface-variant">Regla clínica: <strong class="text-on-surface">Máximo 1 toma diaria</strong></span>
+<button class="px-3 py-1 rounded-full bg-tertiary text-on-tertiary text-xs font-semibold hover:opacity-90 active:scale-95 transition-all" onclick="registerSosUse()">
+            Registrar uso SOS
+          </button>
+</div>
+</article>
+</section>
+<!-- Antecedentes Clínicos y Recetas -->
+<section class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm border border-surface-container space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="text-base font-bold text-on-surface">Antecedentes y Recetas Emitidas</h3>
+<span class="material-symbols-outlined text-outline text-[20px]">assignment</span>
+</div>
+<div class="space-y-2.5">
+<!-- Tarjeta Profesional Tratante -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start justify-between gap-3">
+<div class="flex items-start gap-2.5">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary mt-0.5">
+<span class="material-symbols-outlined text-[20px]">stethoscope</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant leading-none mb-1">Médico Tratante</p>
+<h4 class="text-sm font-bold text-on-surface">Dra. Elena Silva</h4>
+<p class="text-[12px] text-on-surface-variant">Psiquiatra · COSAM Central</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800">Activa</span>
+</div>
+<!-- Farmacia Vinculada -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-start justify-between gap-3">
+<div class="flex items-start gap-2.5">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[20px]">local_pharmacy</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant leading-none mb-1">Farmacia Vinculada</p>
+<h4 class="text-sm font-bold text-on-surface">Farmacia Central COSAM</h4>
+<p class="text-[12px] text-on-surface-variant">Convenio Programa GES / Red Asistencial</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">verified</span>
+</div>
+</div>
+<!-- Botón Registrar Nueva Toma o Síntoma Adverso -->
+<div class="pt-1">
+<button class="w-full h-12 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-semibold text-sm flex items-center justify-center gap-2 active:scale-98 transition-all border border-outline-variant/40" onclick="openReportModal()">
+<span class="material-symbols-outlined text-primary text-[20px]">add_circle</span>
+<span class="">Registrar Nueva Toma o Síntoma Adverso</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Botón Flotante Persistente SOS Crisis -->
+<div class="fixed bottom-20 right-4 z-40">
+<button aria-label="S.O.S Crisis" class="h-13 px-4 py-2.5 rounded-full bg-error text-on-error font-bold text-sm shadow-lg shadow-error/30 flex items-center gap-2 active:scale-95 transition-all hover:bg-red-700" onclick="triggerCrisisAction()">
+<span class="material-symbols-outlined text-[22px] animate-pulse">crisis_alert</span>
+<span class="">S.O.S Crisis</span>
+</button>
+</div>
+<!-- Barra Inferior de Navegación Persistente -->
+<nav class="fixed bottom-0 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-lg border-t border-surface-container px-4 py-2 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
+<div class="max-w-md mx-auto flex items-center justify-around">
+<a class="flex flex-col items-center gap-0.5 text-on-surface-variant/70 hover:text-on-surface py-1 px-3 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[11px] font-medium">Inicio</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-on-surface-variant/70 hover:text-on-surface py-1 px-3 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">sentiment_satisfied</span>
+<span class="text-[11px] font-medium">PROMs</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-on-surface-variant/70 hover:text-on-surface py-1 px-3 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">group</span>
+<span class="text-[11px] font-medium">Red Apoyo</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-primary py-1 px-3 rounded-full bg-primary-fixed/60 font-semibold" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">medication</span>
+<span class="text-[11px]">Tratamiento</span>
+</a>
+</div>
+</nav>
+<!-- Modal Interactivo: Registrar Toma o Síntoma Adverso -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 transition-all" id="report-modal">
+<div class="bg-surface-container-lowest w-full sm:max-w-md rounded-t-3xl sm:rounded-2xl p-5 space-y-4 shadow-2xl max-h-[90vh] overflow-y-auto">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div>
+<h3 class="text-base font-bold text-on-surface">Registro Clínico</h3>
+<p class="text-xs text-on-surface-variant">Toma extraordinaria o efecto secundario</p>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container" onclick="closeReportModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="space-y-3" onsubmit="handleReportSubmit(event)">
+<div>
+<label class="block text-xs font-semibold text-on-surface-variant mb-1">Tipo de Evento</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface text-sm focus:ring-2 focus:ring-primary focus:outline-none" id="tipo-evento">
+<option value="toma">Toma de Medicamento no programada</option>
+<option value="sintoma">Síntoma Adverso / Molestia</option>
+<option value="sos">Uso de Medicación de Rescate</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold text-on-surface-variant mb-1">Medicamento relacionado</label>
+<select class="w-full h-11 px-3 rounded-xl bg-surface-container-low text-on-surface text-sm focus:ring-2 focus:ring-primary focus:outline-none">
+<option>Sertralina 50 mg</option>
+<option>Quetiapina 25 mg</option>
+<option>Clonazepam 0.5 mg</option>
+<option>Otro fármaco o suplemento</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold text-on-surface-variant mb-1">Descripción / Observaciones</label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface text-sm focus:ring-2 focus:ring-primary focus:outline-none resize-none" placeholder="Ej: Mareo leve tras 30 min, somnolencia, etc." required="" rows="3"></textarea>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low text-xs text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+<span class="">El reporte se sincronizará con la ficha supervisada por Dra. Elena Silva.</span>
+</div>
+<div class="pt-2 flex gap-2">
+<button class="flex-1 h-11 rounded-xl bg-surface-container text-on-surface text-sm font-semibold hover:bg-surface-variant" onclick="closeReportModal()" type="button">
+            Cancelar
+          </button>
+<button class="flex-1 h-11 rounded-xl bg-primary text-on-primary text-sm font-semibold hover:bg-primary-container shadow-sm active:scale-95 transition-all" type="submit">
+            Guardar Registro
+          </button>
+</div>
+</form>
+</div>
+</div>
+<script>
+    let quetiapinaRegistrada = false;
+
+    function toggleQuetiapina() {
+      quetiapinaRegistrada = !quetiapinaRegistrada;
+      const statusText = document.getElementById('status-quetiapina-text');
+      const btn = document.getElementById('btn-quetiapina-action');
+
+      if (quetiapinaRegistrada) {
+        statusText.innerHTML = '<span class="text-primary font-bold">Estado: Tomada a las 22:00</span>';
+        btn.className = "px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-xs font-medium hover:bg-surface-variant active:scale-95 transition-all flex items-center gap-1";
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">undo</span> Deshacer';
+      } else {
+        statusText.innerText = 'Estado: Pendiente';
+        btn.className = "px-3 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold shadow-sm hover:bg-primary-container active:scale-95 transition-all flex items-center gap-1";
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">done</span> Marcar tomada';
+      }
+    }
+
+    function registerSosUse() {
+      alert("Se registró el uso SOS de Clonazepam 0.5 mg. Notificación enviada al protocolo de acompañamiento clínico.");
+    }
+
+    function triggerCrisisAction() {
+      alert("Activando Protocolo S.O.S Crisis: Se ofrece contacto inmediato con Línea de Crisis 4141 y contacto de emergencia de tu Red de Apoyo.");
+    }
+
+    function openReportModal() {
+      const modal = document.getElementById('report-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeReportModal() {
+      const modal = document.getElementById('report-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleReportSubmit(e) {
+      e.preventDefault();
+      closeReportModal();
+      alert("Registro guardado exitosamente y analizado por el filtro de seguridad farmacológica SRS-FUN-008.");
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <script src="../../scripts/navigation.js"></script>
+</body></html>

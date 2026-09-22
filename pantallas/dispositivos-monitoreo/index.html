@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>MenteSerena</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#c5e7ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#2e1500", "primary-container": "#587b6d", "outline": "#717974", "on-secondary": "#ffffff", "tertiary-fixed": "#ffdcc1", "inverse-surface": "#2e3131", "surface-container-highest": "#e1e3e2", "on-tertiary-fixed-variant": "#6c3a00", "surface-container-low": "#f2f4f3", "secondary-container": "#c1e4fd", "primary-fixed": "#c5ebda", "tertiary-fixed-dim": "#ffb779", "background": "#f8faf9", "on-secondary-fixed-variant": "#284b5e", "on-tertiary": "#ffffff", "inverse-primary": "#a9cfbe", "outline-variant": "#c1c8c3", "on-primary": "#ffffff", "surface-container-high": "#e6e9e8", "on-background": "#191c1c", "inverse-on-surface": "#eff1f0", "on-surface": "#191c1c", "surface-dim": "#d8dada", "on-primary-container": "#effff6", "surface-bright": "#f8faf9", "on-tertiary-container": "#fffaf8", "tertiary-container": "#a56423", "secondary-fixed-dim": "#a8cbe3", "primary": "#406255", "surface-container": "#eceeed", "on-secondary-container": "#45677b", "on-error": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "on-primary-fixed": "#002117", "tertiary": "#874c0a", "error-container": "#ffdad6", "surface-variant": "#e1e3e2", "secondary": "#416277", "on-primary-fixed-variant": "#2b4d41", "on-secondary-fixed": "#001e2d", "surface-tint": "#436558", "on-surface-variant": "#414845", "primary-fixed-dim": "#a9cfbe", "surface": "#f8faf9" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-lg": "1.75rem", "space-xl": "2.5rem", "space-xs": "0.375rem", "space-md": "1.25rem", "margin": "1.5rem", "gutter": "1.25rem", "space-sm": "0.75rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "label-lg": ["15px", { lineHeight: "20px", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }], "body-lg": ["17px", { lineHeight: "26px", fontWeight: "400" }], "display": ["34px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8faf9;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Regresar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Logo MenteSerena" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XtENI_SwdHcw4dERdXGenNpjW-im8SV40J36mXBOjhK3Q-_N8lt11ANA9Pozx1mI21NAJafB8-FpVZf-eDZJ-YjOM044Ytm3GZkRJAMrcGe290_9e-ugPb8G_zWnPV_9dFTFNVoViDFYd8O1IT0N5a9XLmsCFc6SqJDrXZQ4olXEvPwsQw87iOdK_Ysb8yte0_1Tj0_jzSUGRhN25aWGNSu3YOcgUyeIlrssh9NGDMsfeDhlgVN4JWCQ"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Soporte Crisis</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(64,98,85,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNpJrrVtT1JjepYrb5tkzlZMNAXfsvbGbv0Th08VpKQv31bVxocg6HzCu0N73h8jXGmhu77VWH-5BVcmpld32gxgDbk3hHTHbO8u4JjZmgD6tggx-ZGgaWDzhqolkaOKQTG8XyFC0GKeVS5YRd4eX3mi8wwTyGCghTs2VwjkDZCv79KDd1S9paG7JORrkkKkoRxLKosTjLu_cA7vcg5gsnxTUZm5wnmRiGQr6k15EKZ-3LFMfLYY"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-space-sm pb-space-xl space-y-space-md">
+<!-- Sub-Header & Live Biometric Status -->
+<section class="flex flex-col space-y-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Dispositivos de Monitoreo</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sincronización biométrica continua en tiempo real</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[22px]">devices</span>
+</div>
+</div>
+<!-- Live Status Banner (Ambient / Low stimulation) -->
+<div class="mt-space-xs bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center space-x-space-sm">
+<div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-primary-fixed">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping absolute"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary relative"></span>
+</div>
+<div>
+<span class="inline-flex items-center font-label-md text-label-md text-primary font-semibold">
+            Vigilancia Biométrica Activa
+          </span>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+            Última sincronización: hace 4 min (Fitbit API)
+          </p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-95 transition-transform" id="btn-manual-sync" title="Forzar sincronización">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+</button>
+</div>
+</section>
+<!-- Section: Vinculados Actualmente -->
+<section class="flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dispositivos Vinculados (2)</h3>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2.5 py-1 rounded-full">SRS-FUN-001 / BLE</span>
+</div>
+<!-- Card 1: Fitbit Sense 2 -->
+<article class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm flex flex-col space-y-space-md">
+<!-- Device Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">watch</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h4 class="font-label-lg text-label-lg text-on-surface">Fitbit Sense 2</h4>
+<span class="material-symbols-outlined text-[16px] text-secondary" title="Bluetooth BLE Conectado">bluetooth_connected</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pulsera Biométrica • ID: FB-8842-BLE</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed-dim/40 px-2 py-0.5 rounded-full font-medium">
+          En línea
+        </span>
+</div>
+<!-- Real-time metrics mini-grid -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-low/70 rounded-2xl p-space-sm">
+<div class="flex flex-col items-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary">favorite</span>
+<span class="font-label-lg text-label-lg text-on-surface mt-1">68 <span class="font-label-sm text-[10px]">lpm</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Reposo basal</span>
+</div>
+<div class="flex flex-col items-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-secondary">bedtime</span>
+<span class="font-label-lg text-label-lg text-on-surface mt-1">6h 45m</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sueño (Fase REM)</span>
+</div>
+<div class="flex flex-col items-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">psychology</span>
+<span class="font-label-lg text-label-lg text-on-surface mt-1">Bajo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sensor EDA</span>
+</div>
+</div>
+<!-- Clinical Protocol Notice (SRS-FUN-013) -->
+<div class="flex items-start space-x-space-xs bg-secondary-container/40 rounded-xl p-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">verified_user</span>
+<div class="text-on-secondary-container">
+<p class="font-label-sm text-label-sm font-semibold">Prevención de Viraje Maníaco / Depresivo</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-tight mt-0.5">
+            Las variaciones de sueño &lt; 5h consecutivas activan aviso cautelar al equipo médico asignado.
+          </p>
+</div>
+</div>
+<!-- Sync Frequency & Access List -->
+<div class="flex flex-col space-y-space-xs pt-1">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">pace</span>
+            Cadencia de muestreo:
+          </span>
+<span class="font-label-md text-label-md text-on-surface">Continua / cada 15 min</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">share</span>
+            Transmisión clínica:
+          </span>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-md text-on-surface">Dra. Elena Silva</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-md text-on-surface">Cuidador</span>
+</div>
+</div>
+</div>
+<!-- Device Actions -->
+<div class="flex items-center justify-end space-x-space-xs pt-space-xs">
+<button class="px-space-md h-10 rounded-full bg-surface-container text-on-surface font-label-md text-label-md active:bg-surface-container-high transition-colors flex items-center gap-1.5" onclick="toggleDeviceModal('Fitbit Sense 2')">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+          Ajustes
+        </button>
+<button class="px-space-md h-10 rounded-full bg-error-container text-on-error-container font-label-md text-label-md active:opacity-80 transition-opacity flex items-center gap-1.5" onclick="confirmUnpair('Fitbit Sense 2')">
+<span class="material-symbols-outlined text-[16px]">link_off</span>
+          Desvincular
+        </button>
+</div>
+</article>
+<!-- Card 2: Omron Smart Care -->
+<article class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm flex flex-col space-y-space-md">
+<!-- Device Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-space-sm">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">monitor_heart</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h4 class="font-label-lg text-label-lg text-on-surface">Omron Smart Care</h4>
+<span class="material-symbols-outlined text-[16px] text-secondary" title="Bluetooth BLE Conectado">bluetooth_connected</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tensiómetro Digital Brazo • ID: OMR-209</p>
+</div>
+</div>
+<div class="flex items-center space-x-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-primary">battery_charging_full</span>
+<span>85%</span>
+</div>
+</div>
+<!-- Real-time metrics mini-grid -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low/70 rounded-2xl p-space-sm">
+<div class="flex flex-col items-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+<span class="font-label-lg text-label-lg text-on-surface mt-1">118 / 76 <span class="font-label-sm text-[10px]">mmHg</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Presión arterial sist/diast</span>
+</div>
+<div class="flex flex-col items-center text-center p-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary">pulse_alert</span>
+<span class="font-label-lg text-label-lg text-on-surface mt-1">72 <span class="font-label-sm text-[10px]">lpm</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pulso en toma matutina</span>
+</div>
+</div>
+<!-- Frequency info -->
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<span class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+          Muestreo programado:
+        </span>
+<span class="font-label-md text-label-md text-on-surface">2 tomas al día (Mat/Vesp)</span>
+</div>
+<!-- Device Actions -->
+<div class="flex items-center justify-end space-x-space-xs pt-space-xs">
+<button class="px-space-md h-10 rounded-full bg-surface-container text-on-surface font-label-md text-label-md active:bg-surface-container-high transition-colors flex items-center gap-1.5" onclick="toggleDeviceModal('Omron Smart Care')">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+          Ajustes
+        </button>
+<button class="px-space-md h-10 rounded-full bg-error-container text-on-error-container font-label-md text-label-md active:opacity-80 transition-opacity flex items-center gap-1.5" onclick="confirmUnpair('Omron Smart Care')">
+<span class="material-symbols-outlined text-[16px]">link_off</span>
+          Desvincular
+        </button>
+</div>
+</article>
+</section>
+<!-- Section: Detección y Escaneo Bluetooth (SRS-FUN-020 Paso 1) -->
+<section class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vincular Nuevo Dispositivo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Búsqueda inalámbrica BLE de grado clínico</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">bluetooth_searching</span>
+</div>
+</div>
+<!-- Scanning Radar Area -->
+<div class="relative w-full h-36 bg-surface-container-low rounded-2xl flex flex-col items-center justify-center overflow-hidden" id="radar-container">
+<!-- Concentric animated circles -->
+<div class="absolute w-24 h-24 rounded-full border border-primary/20 animate-ping"></div>
+<div class="absolute w-36 h-36 rounded-full border border-primary/10"></div>
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md relative z-10">
+<span class="material-symbols-outlined text-[24px]">bluetooth_searching</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2 relative z-10" id="radar-label">
+        Escaneo en reposo • Pulsa abajo para iniciar
+      </p>
+</div>
+<!-- Nearby Detected Devices List (Dynamic via JS) -->
+<div class="hidden flex-col space-y-space-xs" id="detected-devices">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+        Dispositivos detectados cerca
+      </p>
+<!-- Candidate 1 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">vital_signs</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Wellue O2Ring Pulsoxímetro</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">BLE RSSI: -48 dBm (Excelente)</p>
+</div>
+</div>
+<button class="px-space-md h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold active:opacity-90" onclick="pairSimulatedDevice('Wellue O2Ring')">
+          Vincular
+        </button>
+</div>
+<!-- Candidate 2 -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">ecg</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Polar H10 Banda Torácica</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">BLE RSSI: -65 dBm (Buena)</p>
+</div>
+</div>
+<button class="px-space-md h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold active:opacity-90" onclick="pairSimulatedDevice('Polar H10')">
+          Vincular
+        </button>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full h-13 py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center space-x-2 shadow-sm active:scale-[0.99] transition-transform" id="btn-scan" onclick="toggleScanState()">
+<span class="material-symbols-outlined text-[20px]">bluetooth</span>
+<span id="scan-btn-text">+ Iniciar Escaneo Bluetooth</span>
+</button>
+</section>
+<!-- Section: Privacidad y Umbrales de Alerta Médica -->
+<section class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">shield</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Privacidad y Umbrales Clínicos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Control de consentimientos bajo SRS-INT-006</p>
+</div>
+</div>
+<!-- Toggle 1: Pausa Temporal -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low/60 rounded-2xl">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface">Pausa Temporal de Telemetría</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Detiene la transmisión automática al portal médico por 24h sin borrar históricos.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input class="sr-only peer" id="pause-telemetry-toggle" onchange="handlePauseTelemetry(this)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Alert Thresholds Accordion / Display -->
+<div class="flex flex-col space-y-space-xs bg-surface-container-low/60 rounded-2xl p-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Umbrales de Alerta Inmediata Configurados</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">notification_important</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1 mt-1 text-[13px]">
+<li class="flex items-center justify-between">
+<span>• Taquicardia sostenida en reposo:</span>
+<span class="font-label-sm font-semibold text-error">&gt; 115 lpm (10 min)</span>
+</li>
+<li class="flex items-center justify-between">
+<span>• Disrupción severa de sueño (SRS-FUN-013):</span>
+<span class="font-label-sm font-semibold text-tertiary">&lt; 4 horas / 2 noches</span>
+</li>
+<li class="flex items-center justify-between">
+<span>• Pico Hipertensivo sistólico:</span>
+<span class="font-label-sm font-semibold text-error">&gt; 145 mmHg</span>
+</li>
+</ul>
+<p class="font-label-sm text-label-sm text-primary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+        Modificable solo con autorización de Psiquiatría Titular.
+      </p>
+</div>
+</section>
+<!-- Section: Historial de Dispositivos Anteriores (SRS-FUN-020 Paso 5) -->
+<section class="bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">history</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Historial de Dispositivos</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SRS-FUN-020.5</span>
+</div>
+<div class="flex flex-col divide-y divide-transparent space-y-2">
+<!-- Past device 1 -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center space-x-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">watch</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Fitbit Charge 4</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Desvinculado el 12 Octubre 2024</p>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary underline p-1" onclick="relinkNotice('Fitbit Charge 4')">
+          Reconectar
+        </button>
+</div>
+<!-- Past device 2 -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center space-x-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Polar OH1 Sensor óptico</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Desvinculado el 04 Agosto 2024</p>
+</div>
+</div>
+<button class="font-label-sm text-label-sm text-primary underline p-1" onclick="relinkNotice('Polar OH1')">
+          Reconectar
+        </button>
+</div>
+</div>
+</section>
+<!-- Safe area buffer -->
+<div class="h-6"></div>
+</div>
+<!-- Modal Dialog / Bottom Sheet for Settings & Disconnect Feedback -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-50 hidden flex items-end justify-center p-space-sm" id="device-action-modal" onclick="closeModalOnBackdrop(event)">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-3xl p-space-lg shadow-xl flex flex-col space-y-space-md transform transition-all duration-300">
+<div class="w-12 h-1.5 bg-surface-container-highest rounded-full mx-auto mb-1"></div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="modal-title">Ajustes del Dispositivo</h3>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="closeDeviceModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-space-sm" id="modal-body">
+<!-- Populated dynamically via JS -->
+</div>
+<div class="flex justify-end space-x-space-xs pt-space-xs">
+<button class="px-space-md h-11 rounded-full bg-surface-container text-on-surface font-label-md text-label-md" onclick="closeDeviceModal()">
+        Cerrar
+      </button>
+<button class="px-space-md h-11 rounded-full bg-primary text-on-primary font-label-md text-label-md" id="modal-confirm-btn">
+        Guardar Cambios
+      </button>
+</div>
+</div>
+</div>
+<!-- Toast notification for Delight/Feedback -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 hidden bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-full font-label-md text-label-md shadow-lg flex items-center space-x-2 transition-opacity" id="toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">check_circle</span>
+<span id="toast-message">Operación realizada con éxito</span>
+</div>
+<script>
+  let isScanning = false;
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.textContent = msg;
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 3200);
+  }
+
+  // Force sync button simulation
+  document.getElementById('btn-manual-sync')?.addEventListener('click', function() {
+    const icon = this.querySelector('.material-symbols-outlined');
+    icon.classList.add('animate-spin');
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      showToast("Biometría sincronizada con Fitbit API y Omron BLE");
+    }, 1200);
+  });
+
+  // Bluetooth scanning flow (SRS-FUN-020)
+  function toggleScanState() {
+    isScanning = !isScanning;
+    const btnText = document.getElementById('scan-btn-text');
+    const radarLabel = document.getElementById('radar-label');
+    const detectedDiv = document.getElementById('detected-devices');
+
+    if (isScanning) {
+      btnText.textContent = "Detener Escaneo BLE";
+      radarLabel.textContent = "Buscando dispositivos compatibles en rango...";
+      detectedDiv.classList.remove('hidden');
+      detectedDiv.classList.add('flex');
+      showToast("Escaneando frecuencias Bluetooth BLE cercanas...");
+    } else {
+      btnText.textContent = "+ Iniciar Escaneo Bluetooth";
+      radarLabel.textContent = "Escaneo en reposo • Pulsa abajo para iniciar";
+      detectedDiv.classList.add('hidden');
+      detectedDiv.classList.remove('flex');
+    }
+  }
+
+  function pairSimulatedDevice(deviceName) {
+    showToast(`Vinculando ${deviceName} y configurando canal clínico...`);
+    setTimeout(() => {
+      showToast(`¡${deviceName} vinculado correctamente a MenteSerena!`);
+    }, 1500);
+  }
+
+  function handlePauseTelemetry(checkbox) {
+    if (checkbox.checked) {
+      showToast("Transmisión de telemetría en pausa por 24 horas");
+    } else {
+      showToast("Vigilancia biométrica continua reanudada");
+    }
+  }
+
+  function relinkNotice(devName) {
+    showToast(`Buscando conexión previa con ${devName}...`);
+  }
+
+  // Generic device modal handler
+  function toggleDeviceModal(deviceName) {
+    const modal = document.getElementById('device-action-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    const confirmBtn = document.getElementById('modal-confirm-btn');
+
+    modalTitle.textContent = `Configuración: ${deviceName}`;
+    modalBody.innerHTML = `
+      <p class="text-[14px]">Define la frecuencia de sincronización y destinatarios clínicos de tus métricas.</p>
+      <div class="space-y-2 pt-1">
+        <label class="block font-label-sm text-on-surface">Frecuencia de lectura BLE</label>
+        <select class="w-full h-11 bg-surface-container rounded-xl px-3 font-body-sm text-on-surface outline-none">
+          <option>Continua en tiempo real (Predeterminado)</option>
+          <option>Cada 30 minutos (Ahorro de batería)</option>
+          <option>Únicamente al abrir la aplicación</option>
+        </select>
+      </div>
+      <div class="pt-1">
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" checked class="rounded text-primary">
+          <span class="font-body-sm text-[13px] text-on-surface">Compartir informe nocturno con Dra. Elena Silva</span>
+        </label>
+      </div>
+    `;
+
+    confirmBtn.textContent = "Guardar Configuración";
+    confirmBtn.onclick = function() {
+      closeDeviceModal();
+      showToast("Configuración del dispositivo actualizada");
+    };
+
+    modal.classList.remove('hidden');
+  }
+
+  function confirmUnpair(deviceName) {
+    const modal = document.getElementById('device-action-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    const confirmBtn = document.getElementById('modal-confirm-btn');
+
+    modalTitle.textContent = `¿Desvincular ${deviceName}?`;
+    modalBody.innerHTML = `
+      <p class="text-[14px] text-on-surface">Al desvincular este dispositivo, se pausará la recolección automática de variables fisiológicas asociadas a tu plan de prevención clínica (SRS-FUN-020).</p>
+      <p class="font-label-sm text-on-surface-variant mt-2 bg-surface-container-low p-3 rounded-xl">Tus registros anteriores permanecerán archivados y cifrados en tu historial médico.</p>
+    `;
+
+    confirmBtn.textContent = "Confirmar Desvinculación";
+    confirmBtn.className = "px-space-md h-11 rounded-full bg-error text-on-error font-label-md text-label-md";
+    confirmBtn.onclick = function() {
+      closeDeviceModal();
+      showToast(`${deviceName} ha sido desvinculado`);
+    };
+
+    modal.classList.remove('hidden');
+  }
+
+  function closeDeviceModal() {
+    const modal = document.getElementById('device-action-modal');
+    modal.classList.add('hidden');
+  }
+
+  function closeModalOnBackdrop(event) {
+    if (event.target.id === 'device-action-modal') {
+      closeDeviceModal();
+    }
+  }
+</script></main>  <script src="../../scripts/navigation.js"></script>
+</body></html>

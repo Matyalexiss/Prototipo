@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>MenteSerena</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#c5e7ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#2e1500", "primary-container": "#587b6d", "outline": "#717974", "on-secondary": "#ffffff", "tertiary-fixed": "#ffdcc1", "inverse-surface": "#2e3131", "surface-container-highest": "#e1e3e2", "on-tertiary-fixed-variant": "#6c3a00", "surface-container-low": "#f2f4f3", "secondary-container": "#c1e4fd", "primary-fixed": "#c5ebda", "tertiary-fixed-dim": "#ffb779", "background": "#f8faf9", "on-secondary-fixed-variant": "#284b5e", "on-tertiary": "#ffffff", "inverse-primary": "#a9cfbe", "outline-variant": "#c1c8c3", "on-primary": "#ffffff", "surface-container-high": "#e6e9e8", "on-background": "#191c1c", "inverse-on-surface": "#eff1f0", "on-surface": "#191c1c", "surface-dim": "#d8dada", "on-primary-container": "#effff6", "surface-bright": "#f8faf9", "on-tertiary-container": "#fffaf8", "tertiary-container": "#a56423", "secondary-fixed-dim": "#a8cbe3", "primary": "#406255", "surface-container": "#eceeed", "on-secondary-container": "#45677b", "on-error": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "on-primary-fixed": "#002117", "tertiary": "#874c0a", "error-container": "#ffdad6", "surface-variant": "#e1e3e2", "secondary": "#416277", "on-primary-fixed-variant": "#2b4d41", "on-secondary-fixed": "#001e2d", "surface-tint": "#436558", "on-surface-variant": "#414845", "primary-fixed-dim": "#a9cfbe", "surface": "#f8faf9" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-lg": "1.75rem", "space-xl": "2.5rem", "space-xs": "0.375rem", "space-md": "1.25rem", "margin": "1.5rem", "gutter": "1.25rem", "space-sm": "0.75rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "label-lg": ["15px", { lineHeight: "20px", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }], "body-lg": ["17px", { lineHeight: "26px", fontWeight: "400" }], "display": ["34px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8faf9;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Regresar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Logo MenteSerena" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XtENI_SwdHcw4dERdXGenNpjW-im8SV40J36mXBOjhK3Q-_N8lt11ANA9Pozx1mI21NAJafB8-FpVZf-eDZJ-YjOM044Ytm3GZkRJAMrcGe290_9e-ugPb8G_zWnPV_9dFTFNVoViDFYd8O1IT0N5a9XLmsCFc6SqJDrXZQ4olXEvPwsQw87iOdK_Ysb8yte0_1Tj0_jzSUGRhN25aWGNSu3YOcgUyeIlrssh9NGDMsfeDhlgVN4JWCQ"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Soporte Crisis</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(64,98,85,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNpJrrVtT1JjepYrb5tkzlZMNAXfsvbGbv0Th08VpKQv31bVxocg6HzCu0N73h8jXGmhu77VWH-5BVcmpld32gxgDbk3hHTHbO8u4JjZmgD6tggx-ZGgaWDzhqolkaOKQTG8XyFC0GKeVS5YRd4eX3mi8wwTyGCghTs2VwjkDZCv79KDd1S9paG7JORrkkKkoRxLKosTjLu_cA7vcg5gsnxTUZm5wnmRiGQr6k15EKZ-3LFMfLYY"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Top Ambient Context Bar -->
+<div class="px-gutter pt-space-sm pb-space-xs flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase font-semibold">Agenda Clínica FHIR</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Mis Citas Médicas</h2>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-space-sm py-1 rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Sincronizado COSAM</span>
+</div>
+</div>
+<div class="px-gutter flex flex-col gap-space-md mt-space-xs">
+<!-- SRS-FUN-017 Paso 8: Banner de Solicitud de Adelanto por Descompensación -->
+<section class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm relative overflow-hidden transition-all duration-300">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-tertiary-fixed/30 pointer-events-none blur-xl"></div>
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">¿Sientes síntomas en aumento?</h3>
+<span class="bg-tertiary-fixed-dim/40 text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-semibold">Prioritario</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+            Si experimentas descompensación emocional o crisis incipiente, solicita la reasignación prioritaria al cupo más próximo con tu equipo tratante.
+          </p>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex flex-col gap-2 relative z-10">
+<button class="w-full h-11 bg-tertiary-container hover:bg-tertiary text-on-tertiary rounded-full font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all" id="btn-triage-adelanto">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Solicitar Adelanto de Cita</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline text-center">Protocolo clínico SRS-FUN-017: evaluación automatizada en &lt;15 min</span>
+</div>
+<!-- Feedback Toast Solicitud (Hidden by default) -->
+<div class="hidden mt-3 p-3 bg-primary-fixed text-on-primary-fixed rounded-DEFAULT flex items-center gap-2 transition-all" id="toast-adelanto">
+<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
+<p class="font-body-sm text-body-sm font-medium">Solicitud transmitida con prioridad a COSAM Oriente. Te contactaremos hoy.</p>
+</div>
+</section>
+<!-- Próxima Cita Principal Destacada (Card Nivel 1) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between border-b-0 pb-0">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Próxima Atención
+          </span>
+<span class="px-2 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            Confirmada
+          </span>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span class="font-label-sm text-label-sm font-semibold">Cifrada E2E</span>
+</div>
+</div>
+<!-- Profesional Info -->
+<div class="flex items-center gap-space-sm mt-1">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm ring-2 ring-primary/20 shrink-0" data-alt="Retrato profesional médico y sereno de la Dra. Elena Silva, psiquiatra en delantal clínico blanco con fondo iluminado suave y una sonrisa empática que transmite tranquilidad y contención clínica." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QvgRNGp6U4JUzkYRlcviz-QUQWQxvnhBWsN1AIfxFRDEWJmXTFC1VSm2NSxUFMHQWRYKX338Zn-q8MZ_ETamk9X_UulWProTMNowHq3B_MggCDntGjh4CO7pOvZN0993A48_4QfvNSWGKLw4QdL-xCKlIpbmQknuHboI-H-x1x-i2-TrGjmwWxbFK2WF5dtC6Xo2TWLTzjqKkApc6Y9mBrUNs3NfqVCGKBdERH6WBh3BGb40Lw8"/>
+<div class="flex flex-col min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Dra. Elena Silva</h4>
+<p class="font-body-sm text-body-sm text-primary font-medium truncate">Psiquiatría de Seguimiento</p>
+<span class="font-label-sm text-label-sm text-outline truncate">Reg. SIS: PSIQ-9921 • COSAM Santiago Oriente</span>
+</div>
+</div>
+<!-- Detalles Fecha y Hora -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]">calendar_clock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Jueves 30 de Octubre</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">15:30 hrs (45 minutos)</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+          En 3 días
+        </span>
+</div>
+<!-- Teleconsulta Action Button -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-12 bg-primary-container hover:bg-primary text-on-primary-container rounded-full font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[22px]">videocam</span>
+<span>Ingresar a Sala de Teleconsulta</span>
+</button>
+<!-- Push reminders info -->
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">notifications_active</span>
+<span class="font-label-sm text-label-sm">Recordatorios activos (24h y 2h antes vía Push)</span>
+</div>
+</div>
+<!-- Acciones secundarias discretas -->
+<div class="flex items-center justify-between pt-2">
+<button class="font-label-md text-label-md text-secondary hover:text-on-secondary-fixed-variant font-medium flex items-center gap-1 py-1" id="btn-reprogramar">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+          Reprogramar
+        </button>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-medium flex items-center gap-1 py-1" id="btn-detalles">
+<span class="material-symbols-outlined text-[18px]">info</span>
+          Detalles clínicos
+        </button>
+<button class="font-label-md text-label-md text-error hover:opacity-80 font-medium flex items-center gap-1 py-1" id="btn-cancelar">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+          Cancelar
+        </button>
+</div>
+</section>
+<!-- Botón de Agendar Nueva Cita Principal -->
+<section>
+<button class="w-full h-14 bg-primary text-on-primary rounded-full font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-md active:scale-[0.98] transition-all" id="btn-open-booking">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+<span>+ Agendar Nueva Cita Médica</span>
+</button>
+</section>
+<!-- Modal / Drawer Interactivo de Reserva (Inline expandable) -->
+<div class="hidden bg-surface-container-lowest rounded-lg p-space-md shadow-lg flex flex-col gap-space-sm transition-all duration-300" id="booking-drawer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">calendar_month</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Agendamiento Ambulatorio</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="btn-close-booking">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Selecciona especialidad y modalidad. Red asistencial integrada vía HL7 FHIR [SRS-INT-005].
+      </p>
+<!-- Selector de Especialidad -->
+<div class="flex flex-col gap-1.5 mt-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Especialidad Requerida</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="booking-tag active bg-primary-container text-on-primary-container rounded-DEFAULT py-2.5 px-3 text-left flex items-center gap-2 text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+            Psicología (TCC)
+          </button>
+<button class="booking-tag bg-surface-container-low text-on-surface rounded-DEFAULT py-2.5 px-3 text-left flex items-center gap-2 text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+            Psiquiatría
+          </button>
+<button class="booking-tag bg-surface-container-low text-on-surface rounded-DEFAULT py-2.5 px-3 text-left flex items-center gap-2 text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">self_improvement</span>
+            Terapia Ocupacional
+          </button>
+<button class="booking-tag bg-surface-container-low text-on-surface rounded-DEFAULT py-2.5 px-3 text-left flex items-center gap-2 text-label-sm font-label-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+            Trabajo Social
+          </button>
+</div>
+</div>
+<!-- Selector de Modalidad -->
+<div class="flex flex-col gap-1.5 mt-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Modalidad de Atención</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="modality-tag active bg-secondary text-on-secondary rounded-DEFAULT py-2 px-3 text-center text-label-sm font-label-sm font-semibold flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+            Teleconsulta
+          </button>
+<button class="modality-tag bg-surface-container-low text-on-surface rounded-DEFAULT py-2 px-3 text-center text-label-sm font-label-sm font-semibold flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+            Presencial
+          </button>
+</div>
+</div>
+<!-- Centro de Salud Asignado -->
+<div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex items-center justify-between mt-1">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Centro Preferente Asignado</span>
+<span class="font-body-sm text-body-sm text-outline">CESFAM Las Lilas / COSAM Providencia</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium underline">Cambiar</span>
+</div>
+<!-- Calendario Interactivo Compacto -->
+<div class="flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Noviembre 2025</span>
+<span class="font-label-sm text-label-sm text-primary">Cupos disponibles: 8</span>
+</div>
+<div class="grid grid-cols-5 gap-1.5">
+<div class="calendar-slot p-2 rounded-DEFAULT bg-surface-container text-center cursor-pointer hover:bg-primary-fixed transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Lun 10</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">10:00</span>
+</div>
+<div class="calendar-slot p-2 rounded-DEFAULT bg-primary text-on-primary text-center cursor-pointer shadow-xs">
+<span class="font-label-sm text-label-sm block text-on-primary/80">Mar 11</span>
+<span class="font-label-md text-label-md font-semibold text-on-primary">11:30</span>
+</div>
+<div class="calendar-slot p-2 rounded-DEFAULT bg-surface-container text-center cursor-pointer hover:bg-primary-fixed transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Mié 12</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">16:00</span>
+</div>
+<div class="calendar-slot p-2 rounded-DEFAULT bg-surface-container text-center cursor-pointer hover:bg-primary-fixed transition-colors">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Jue 13</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">09:15</span>
+</div>
+<div class="calendar-slot p-2 rounded-DEFAULT bg-surface-container-high opacity-50 text-center pointer-events-none">
+<span class="font-label-sm text-label-sm text-outline block">Vie 14</span>
+<span class="font-label-sm text-label-sm text-outline">Agotado</span>
+</div>
+</div>
+</div>
+<button class="w-full h-11 mt-2 bg-primary hover:bg-primary-container text-on-primary rounded-full font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2" id="btn-confirm-booking">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+        Confirmar Reserva con Dra. R. Tapia
+      </button>
+</div>
+<!-- Próximas Citas Programadas (Lista con tarjetas) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Otras Citas Agendadas</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">2 pendientes</span>
+</div>
+<!-- Tarjeta 1: Psicoterapia TCC -->
+<article class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-xs flex flex-col gap-space-xs transition-transform active:scale-[0.99]">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+            Presencial
+          </span>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">notifications</span>
+<span>Recordatorio Activo</span>
+</div>
+</div>
+<div class="flex items-start gap-3 mt-1">
+<img class="w-11 h-11 rounded-full object-cover shrink-0" data-alt="Fotografía de perfil profesional de Psicólogo Rodrigo Tapia con expresión cercana y cálida, usando camisa azul suave y fondo de biblioteca de consultorio clínico relajante." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJNkYGdhEYiWZuYWyGkNHGOm5eFAonpZYxbTJSrW-N9LErWnP-lYkRMALcxiObQOcvA9n8f9PvlZoxIVqyp3I_Xv3661DDoyn-gc_5AL61LRc6OwDtfGZBieL9D3rFktb5Z3O-WXF0wNm4D8YTY2CP_sLceaW34L2duKg8wvxIDEWRWYyVEA2uVmm1CDXWpMAK0g_j03eZndRYY1B3EAbTHKZlwblJfSknYTuNfFpKXFEtGGnEdOs"/>
+<div class="flex flex-col flex-1 min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Psic. Rodrigo Tapia</h4>
+<span class="font-body-sm text-body-sm text-primary font-medium">Psicoterapia Cognitivo-Conductual</span>
+<span class="font-label-sm text-label-sm text-outline">Box 4, CESFAM Las Lilas</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1 bg-surface-container-low rounded-DEFAULT px-3 py-2">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">event</span>
+<span class="font-label-md text-label-md font-semibold">Lunes 3 de Noviembre</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">11:00 hrs</span>
+</div>
+</article>
+<!-- Tarjeta 2: Terapia Ocupacional -->
+<article class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-xs flex flex-col gap-space-xs transition-transform active:scale-[0.99]">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+            Presencial
+          </span>
+<span class="font-label-sm text-label-sm text-outline">En 10 días</span>
+</div>
+<div class="flex items-start gap-3 mt-1">
+<img class="w-11 h-11 rounded-full object-cover shrink-0" data-alt="Retrato de Terapeuta Ocupacional Camila Soto, mujer joven profesional sonriendo de forma acogedora en sala de rehabilitación y mindfulness con plantas verdes y luz natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE2yrWqdyP9IJjENF2GKVtbUbV1pf6xGwRs4O6aq_ZDd7d9MXhbXzlBWG-ZhusHhJQ5GkXy-BnqPOvdjTq7a_Vf5uan8HlPEM4FQhxMDF4lC2zA2cKKrxRgXtGmsxbZ1KsUlwNf9JxJSVp-QkF_DqczU9o6jhWqW5erGKvM5wCTTCcV31j2mDmoRkBPcvf0QCopiIrEfIb2cTqvk58jti53tlgzBFu4F3V7gjhLkqWacn6yM-2X8s"/>
+<div class="flex flex-col flex-1 min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">T.O. Camila Soto</h4>
+<span class="font-body-sm text-body-sm text-primary font-medium">Terapia Ocupacional y Reinserción</span>
+<span class="font-label-sm text-label-sm text-outline">Taller 2, COSAM Santiago Oriente</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1 bg-surface-container-low rounded-DEFAULT px-3 py-2">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">event</span>
+<span class="font-label-md text-label-md font-semibold">Viernes 7 de Noviembre</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">16:00 hrs</span>
+</div>
+</article>
+</section>
+<!-- Recordatorios Configurables y Cuidador Designado [SRS-FUN-017 Paso 6] -->
+<section class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-xs flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">notifications_paused</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Canales de Recordatorio</h3>
+</div>
+</div>
+<!-- Switch 1: Cuidador Designado -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col pr-3">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Avisar a Cuidador Designado</span>
+<span class="font-body-sm text-body-sm text-outline">Enviar recordatorio a María Paz (Madre) 24h antes de cada cita clínica.</span>
+</div>
+<button class="w-12 h-7 bg-primary rounded-full p-0.5 flex items-center justify-end transition-colors cursor-pointer shrink-0" id="toggle-cuidador">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm block transition-transform"></span>
+</button>
+</div>
+<!-- Switch 2: Notificaciones Push App -->
+<div class="flex items-center justify-between pt-2 border-t-0">
+<div class="flex flex-col pr-3">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Notificaciones Push en Dispositivo</span>
+<span class="font-body-sm text-body-sm text-outline">Alertas suaves y no intrusivas en pantalla de bloqueo.</span>
+</div>
+<button class="w-12 h-7 bg-primary rounded-full p-0.5 flex items-center justify-end transition-colors cursor-pointer shrink-0" id="toggle-push">
+<span class="w-6 h-6 rounded-full bg-surface-container-lowest shadow-sm block transition-transform"></span>
+</button>
+</div>
+</section>
+<!-- Historial de Citas Pasadas (Colapsable Resumen) -->
+<section class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-xs flex flex-col gap-2">
+<button class="w-full flex items-center justify-between text-left" id="btn-toggle-history">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Última Cita Atendida</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform text-[22px]" id="history-arrow">expand_more</span>
+</button>
+<!-- Resumen Cita Pasada -->
+<div class="flex flex-col gap-2 pt-2" id="history-content">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Psiquiatría de Control - Dra. Elena Silva</span>
+<span class="font-body-sm text-body-sm text-outline">Jueves 16 de Octubre, 15:30 hrs • Teleconsulta</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+            Asistida
+          </span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-3 mt-1 flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">notes</span>
+<span class="font-label-sm text-label-sm font-semibold">Indicaciones Clínicas Autorizadas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+            "Paciente en evolución favorable. Se mantiene esquema farmacológico y se indica reforzar registro diario de sueño Fitbit."
+          </p>
+<a class="font-label-sm text-label-sm text-secondary font-semibold hover:underline mt-1 inline-flex items-center gap-1" href="#receta">
+<span class="material-symbols-outlined text-[14px]">download</span> Descargar Resumen &amp; Receta Digital
+          </a>
+</div>
+</div>
+</section>
+<!-- Mensaje de Tranquilidad y Soporte -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low text-center flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[24px]">chevron_left</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+        Tus citas y datos clínicos están resguardados bajo la Ley de Derechos del Paciente y el estándar interoperable FHIR.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  // Interactions for MenteSerena Clinical Scheduling Screen
+
+  // 1. Triage / Descompensación adelantamiento
+  const btnTriage = document.getElementById('btn-triage-adelanto');
+  const toastAdelanto = document.getElementById('toast-adelanto');
+  if (btnTriage && toastAdelanto) {
+    btnTriage.addEventListener('click', () => {
+      btnTriage.disabled = true;
+      btnTriage.classList.add('opacity-75');
+      btnTriage.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span> Transmitiendo solicitud...';
+      
+      setTimeout(() => {
+        btnTriage.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> Solicitud Recibida';
+        toastAdelanto.classList.remove('hidden');
+      }, 1200);
+    });
+  }
+
+  // 2. Booking Drawer Toggle
+  const btnOpenBooking = document.getElementById('btn-open-booking');
+  const btnCloseBooking = document.getElementById('btn-close-booking');
+  const bookingDrawer = document.getElementById('booking-drawer');
+  const btnConfirmBooking = document.getElementById('btn-confirm-booking');
+
+  if (btnOpenBooking && bookingDrawer) {
+    btnOpenBooking.addEventListener('click', () => {
+      bookingDrawer.classList.toggle('hidden');
+      if (!bookingDrawer.classList.contains('hidden')) {
+        bookingDrawer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  if (btnCloseBooking && bookingDrawer) {
+    btnCloseBooking.addEventListener('click', () => {
+      bookingDrawer.classList.add('hidden');
+    });
+  }
+
+  if (btnConfirmBooking && bookingDrawer) {
+    btnConfirmBooking.addEventListener('click', () => {
+      btnConfirmBooking.innerHTML = '<span class="material-symbols-outlined text-[20px]">done_all</span> ¡Cita Agendada con Éxito!';
+      btnConfirmBooking.classList.remove('bg-primary');
+      btnConfirmBooking.classList.add('bg-primary-container');
+      setTimeout(() => {
+        bookingDrawer.classList.add('hidden');
+        btnConfirmBooking.innerHTML = '<span class="material-symbols-outlined text-[20px]">task_alt</span> Confirmar Reserva con Dra. R. Tapia';
+      }, 1600);
+    });
+  }
+
+  // Tag selection microinteractions
+  document.querySelectorAll('.booking-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      document.querySelectorAll('.booking-tag').forEach(t => {
+        t.classList.remove('bg-primary-container', 'text-on-primary-container');
+        t.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      tag.classList.remove('bg-surface-container-low', 'text-on-surface');
+      tag.classList.add('bg-primary-container', 'text-on-primary-container');
+    });
+  });
+
+  document.querySelectorAll('.modality-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      document.querySelectorAll('.modality-tag').forEach(t => {
+        t.classList.remove('bg-secondary', 'text-on-secondary');
+        t.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      tag.classList.remove('bg-surface-container-low', 'text-on-surface');
+      tag.classList.add('bg-secondary', 'text-on-secondary');
+    });
+  });
+
+  // Calendar slot selection
+  document.querySelectorAll('.calendar-slot').forEach(slot => {
+    slot.addEventListener('click', () => {
+      document.querySelectorAll('.calendar-slot').forEach(s => {
+        if (!s.classList.contains('opacity-50')) {
+          s.classList.remove('bg-primary', 'text-on-primary');
+          s.classList.add('bg-surface-container', 'text-on-surface');
+        }
+      });
+      slot.classList.remove('bg-surface-container', 'text-on-surface');
+      slot.classList.add('bg-primary', 'text-on-primary');
+    });
+  });
+
+  // 3. Toggle switches
+  function wireToggle(buttonId) {
+    const btn = document.getElementById(buttonId);
+    if (!btn) return;
+    let active = true;
+    btn.addEventListener('click', () => {
+      active = !active;
+      if (active) {
+        btn.classList.remove('bg-surface-container-highest', 'justify-start');
+        btn.classList.add('bg-primary', 'justify-end');
+      } else {
+        btn.classList.remove('bg-primary', 'justify-end');
+        btn.classList.add('bg-surface-container-highest', 'justify-start');
+      }
+    });
+  }
+  wireToggle('toggle-cuidador');
+  wireToggle('toggle-push');
+
+  // 4. Toggle History
+  const btnToggleHistory = document.getElementById('btn-toggle-history');
+  const historyContent = document.getElementById('history-content');
+  const historyArrow = document.getElementById('history-arrow');
+  if (btnToggleHistory && historyContent && historyArrow) {
+    btnToggleHistory.addEventListener('click', () => {
+      historyContent.classList.toggle('hidden');
+      historyArrow.style.transform = historyContent.classList.contains('hidden') ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
+  }
+</script></main>  <script src="../../scripts/navigation.js"></script>
+</body></html>

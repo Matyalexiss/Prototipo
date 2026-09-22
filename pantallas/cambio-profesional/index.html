@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>MenteSerena</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed": "#c5e7ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#2e1500", "primary-container": "#587b6d", "outline": "#717974", "on-secondary": "#ffffff", "tertiary-fixed": "#ffdcc1", "inverse-surface": "#2e3131", "surface-container-highest": "#e1e3e2", "on-tertiary-fixed-variant": "#6c3a00", "surface-container-low": "#f2f4f3", "secondary-container": "#c1e4fd", "primary-fixed": "#c5ebda", "tertiary-fixed-dim": "#ffb779", "background": "#f8faf9", "on-secondary-fixed-variant": "#284b5e", "on-tertiary": "#ffffff", "inverse-primary": "#a9cfbe", "outline-variant": "#c1c8c3", "on-primary": "#ffffff", "surface-container-high": "#e6e9e8", "on-background": "#191c1c", "inverse-on-surface": "#eff1f0", "on-surface": "#191c1c", "surface-dim": "#d8dada", "on-primary-container": "#effff6", "surface-bright": "#f8faf9", "on-tertiary-container": "#fffaf8", "tertiary-container": "#a56423", "secondary-fixed-dim": "#a8cbe3", "primary": "#406255", "surface-container": "#eceeed", "on-secondary-container": "#45677b", "on-error": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "on-primary-fixed": "#002117", "tertiary": "#874c0a", "error-container": "#ffdad6", "surface-variant": "#e1e3e2", "secondary": "#416277", "on-primary-fixed-variant": "#2b4d41", "on-secondary-fixed": "#001e2d", "surface-tint": "#436558", "on-surface-variant": "#414845", "primary-fixed-dim": "#a9cfbe", "surface": "#f8faf9" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-lg": "1.75rem", "space-xl": "2.5rem", "space-xs": "0.375rem", "space-md": "1.25rem", "margin": "1.5rem", "gutter": "1.25rem", "space-sm": "0.75rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "label-lg": ["15px", { lineHeight: "20px", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }], "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }], "body-lg": ["17px", { lineHeight: "26px", fontWeight: "400" }], "display": ["34px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8faf9;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-space-sm flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Regresar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface active:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Logo MenteSerena" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XtENI_SwdHcw4dERdXGenNpjW-im8SV40J36mXBOjhK3Q-_N8lt11ANA9Pozx1mI21NAJafB8-FpVZf-eDZJ-YjOM044Ytm3GZkRJAMrcGe290_9e-ugPb8G_zWnPV_9dFTFNVoViDFYd8O1IT0N5a9XLmsCFc6SqJDrXZQ4olXEvPwsQw87iOdK_Ysb8yte0_1Tj0_jzSUGRhN25aWGNSu3YOcgUyeIlrssh9NGDMsfeDhlgVN4JWCQ"/><h1 class="font-headline-sm text-headline-sm text-on-surface truncate ml-1">Soporte Crisis</h1></div><div class="flex items-center gap-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(64,98,85,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNpJrrVtT1JjepYrb5tkzlZMNAXfsvbGbv0Th08VpKQv31bVxocg6HzCu0N73h8jXGmhu77VWH-5BVcmpld32gxgDbk3hHTHbO8u4JjZmgD6tggx-ZGgaWDzhqolkaOKQTG8XyFC0GKeVS5YRd4eX3mi8wwTyGCghTs2VwjkDZCv79KDd1S9paG7JORrkkKkoRxLKosTjLu_cA7vcg5gsnxTUZm5wnmRiGQr6k15EKZ-3LFMfLYY"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full px-space-sm pb-space-xl space-y-space-md select-none" id="scrollable-container">
+<!-- Retorno & Contexto Terapéutico -->
+<section class="flex flex-col pt-space-xs">
+<div class="flex items-center gap-space-xs mb-space-xs text-primary">
+<button class="flex items-center gap-1.5 py-1 px-2.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-primary active:scale-95" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="font-label-md text-label-md text-primary">Perfil y Configuración</span>
+</button>
+</div>
+<div class="space-y-1.5">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary-fixed/40 self-start">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+        Derechos del Paciente • SRS-FUN-025
+      </span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Cambio de Profesional Tratante</h2>
+</div>
+<!-- Mensaje de acogida y validación emocional libre de culpas -->
+<div class="mt-space-sm p-space-md rounded-lg bg-surface-container-lowest shadow-[0_8px_24px_rgba(32,45,39,0.04)] relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary-fixed/20 pointer-events-none blur-xl"></div>
+<div class="flex gap-space-sm items-start relative z-10">
+<div class="w-9 h-9 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="space-y-1 min-w-0">
+<p class="font-label-lg text-label-lg text-primary">Tu tranquilidad es nuestra prioridad</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            La afinidad terapéutica es fundamental para tu recuperación. Tienes el derecho de solicitar una reasignación de tu profesional tratante en cualquier momento, de forma confidencial, respetuosa y sin afectar la continuidad de tus cuidados médicos.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Profesional Actual Asignado -->
+<section class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Asignación Vigente</span>
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+        Activa
+      </span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_8px_24px_rgba(32,45,39,0.04)] flex flex-col space-y-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-full object-cover shadow-[0_4px_12px_rgba(64,98,85,0.12)]" data-alt="Retrato cálido y empático de la Dra. Elena Silva, psiquiatra de adultos, vistiendo chaqueta verde salvia suave en un consultorio clínico con luz natural suave y una planta decorativa de fondo, transmitiendo tranquilidad y profesionalismo sereno." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALfA4VYnI7q1Pi3P5YzTPK7fieVuLsaA_wrKQLFIm3NcfWWw_rcuikGn7G29GEunileGn9n13y1DlcAZngxh9hkMzu_DtB0J2poC7QGyqGRlFTSyWGiSO2FnP_cxZQ1cydb2gbt0LQNFeWxw_2JdYrhh0iZ3O1pObTIvBOQQgn1MC1tKBcaf3Dw3GJgIvc_h9rLB4CiW9g7pWczprX7QZZAo2Dd4bRGiGcJZsqDyPAxE-52jqoU4o"/>
+<div class="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+</div>
+<div class="min-w-0 flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface truncate">Dra. Elena Silva Monckeberg</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Psiquiatría de Adultos • Psicoterapia</p>
+<div class="flex items-center gap-1.5 mt-1 text-outline">
+<span class="material-symbols-outlined text-[15px]">apartment</span>
+<span class="font-label-sm text-label-sm truncate">COSAM Santiago Oriente • Red Pública</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant bg-surface-container-low rounded-DEFAULT px-3 py-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">calendar_today</span>
+<span class="font-label-md text-label-md">Tiempo de seguimiento:</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">5 meses</span>
+</div>
+</div>
+</section>
+<!-- Formulario Guiado de Solicitud de Cambio -->
+<section class="space-y-space-md">
+<div class="px-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Detalle de tu Solicitud</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ayúdanos a comprender tus necesidades para coordinar el mejor acompañamiento.</p>
+</div>
+<!-- Campo 1: Especialidad a cambiar -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_8px_24px_rgba(32,45,39,0.04)] space-y-space-xs">
+<label class="block font-label-lg text-label-lg text-on-surface">1. Especialidad o área a reasignar</label>
+<div class="grid grid-cols-1 gap-2 pt-1" id="specialty-options">
+<button class="specialty-btn flex items-center justify-between p-3.5 rounded-DEFAULT bg-primary-fixed/30 text-on-surface transition-all text-left" onclick="selectRadio(this, 'specialty-btn')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<span class="font-body-md text-body-md font-medium">Psiquiatría Titular</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] radio-icon" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+</button>
+<button class="specialty-btn flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low text-on-surface-variant transition-all text-left" onclick="selectRadio(this, 'specialty-btn')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">self_improvement</span>
+<span class="font-body-md text-body-md font-medium">Psicoterapeuta TCC</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] radio-icon">radio_button_unchecked</span>
+</button>
+<button class="specialty-btn flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low text-on-surface-variant transition-all text-left" onclick="selectRadio(this, 'specialty-btn')" type="button">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">accessibility_new</span>
+<span class="font-body-md text-body-md font-medium">Terapeuta Ocupacional</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] radio-icon">radio_button_unchecked</span>
+</button>
+</div>
+</div>
+<!-- Campo 2: Motivo principal -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_8px_24px_rgba(32,45,39,0.04)] space-y-space-xs">
+<label class="block font-label-lg text-label-lg text-on-surface">2. Motivo principal de la reasignación</label>
+<p class="font-body-sm text-body-sm text-outline">Esta respuesta es confidencial y solo la conocerá la dirección clínica.</p>
+<div class="space-y-2 pt-1" id="reason-options">
+<label class="reason-label flex items-start gap-3 p-3.5 rounded-DEFAULT bg-primary-fixed/20 cursor-pointer transition-colors">
+<input checked="" class="hidden" name="reason" onchange="updateRadioStyles()" type="radio" value="afinidad"/>
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 icon-check" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface leading-snug">Falta de afinidad terapéutica o química</span>
+</label>
+<label class="reason-label flex items-start gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-colors">
+<input class="hidden" name="reason" onchange="updateRadioStyles()" type="radio" value="horarios"/>
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5 icon-check">radio_button_unchecked</span>
+<span class="font-body-md text-body-md text-on-surface-variant leading-snug">Incompatibilidad de horarios y agenda</span>
+</label>
+<label class="reason-label flex items-start gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-colors">
+<input class="hidden" name="reason" onchange="updateRadioStyles()" type="radio" value="enfoque"/>
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5 icon-check">radio_button_unchecked</span>
+<span class="font-body-md text-body-md text-on-surface-variant leading-snug">Preferencia por otro enfoque clínico o género del profesional</span>
+</label>
+<label class="reason-label flex items-start gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-colors">
+<input class="hidden" name="reason" onchange="updateRadioStyles()" type="radio" value="traslado"/>
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5 icon-check">radio_button_unchecked</span>
+<span class="font-body-md text-body-md text-on-surface-variant leading-snug">Cambio de domicilio o traslado territorial</span>
+</label>
+<label class="reason-label flex items-start gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low cursor-pointer transition-colors">
+<input class="hidden" name="reason" onchange="updateRadioStyles()" type="radio" value="otro"/>
+<span class="material-symbols-outlined text-outline text-[20px] mt-0.5 icon-check">radio_button_unchecked</span>
+<span class="font-body-md text-body-md text-on-surface-variant leading-snug">Otro motivo personal</span>
+</label>
+</div>
+</div>
+<!-- Campo 3: Preferencias para la nueva asignación -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_8px_24px_rgba(32,45,39,0.04)] space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="block font-label-lg text-label-lg text-on-surface">3. Preferencias deseadas</label>
+<span class="font-label-sm text-label-sm text-outline">Opcional</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Selecciona aquellos elementos que faciliten tu comodidad:</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<button class="tag-chip flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed text-left transition-all" onclick="toggleTag(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">female</span>
+<span class="font-label-md text-label-md">Profesional mujer</span>
+</button>
+<button class="tag-chip flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant text-left transition-all" onclick="toggleTag(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">male</span>
+<span class="font-label-md text-label-md">Profesional hombre</span>
+</button>
+<button class="tag-chip flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed text-left transition-all" onclick="toggleTag(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+<span class="font-label-md text-label-md">Modalidad Teleconsulta preferente</span>
+</button>
+<button class="tag-chip flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant text-left transition-all" onclick="toggleTag(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">wb_twilight</span>
+<span class="font-label-md text-label-md">Horarios matutinos</span>
+</button>
+<button class="tag-chip flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant text-left transition-all" onclick="toggleTag(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">wb_sunny</span>
+<span class="font-label-md text-label-md">Horarios de tarde</span>
+</button>
+</div>
+</div>
+<!-- Campo 4: Comentarios o antecedentes adicionales -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-[0_8px_24px_rgba(32,45,39,0.04)] space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="comentarios">4. Comentarios o antecedentes adicionales</label>
+<span class="font-label-sm text-label-sm text-outline" id="char-counter">0 / 300</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-3.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(88,123,109,0.3)] transition-all resize-none" id="comentarios" maxlength="300" oninput="handleCharCount(this)" placeholder="Cuéntanos si hay algo que el equipo coordinador deba tener en cuenta para tu nueva asignación..." rows="4"></textarea>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[15px]">lock</span>
+        Este texto es estrictamente confidencial entre tú y la jefatura médica.
+      </p>
+</div>
+</section>
+<!-- Flujo de Garantía y Continuidad de Cuidados -->
+<section class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Garantía de Continuidad Terapéutica</h3>
+</div>
+<div class="space-y-space-xs">
+<div class="flex gap-3 items-start bg-surface-container-lowest p-3 rounded-DEFAULT shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-md text-label-md shrink-0 font-bold">1</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Tu solicitud será evaluada por la jefatura del servicio clínico de forma completamente privada.</p>
+</div>
+<div class="flex gap-3 items-start bg-surface-container-lowest p-3 rounded-DEFAULT shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-md text-label-md shrink-0 font-bold">2</div>
+<p class="font-body-md text-body-md text-on-surface-variant">No se suspenderá tu medicación ni controles actuales hasta que el nuevo especialista acepte el caso.</p>
+</div>
+<div class="flex gap-3 items-start bg-surface-container-lowest p-3 rounded-DEFAULT shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-md text-label-md shrink-0 font-bold">3</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Recibirás respuesta y la nueva asignación en un plazo máximo de <span class="font-semibold text-on-surface">72 horas hábiles</span>.</p>
+</div>
+</div>
+</section>
+<!-- Acciones Principales -->
+<section class="space-y-space-xs pt-space-xs">
+<button class="w-full h-[54px] rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-[0_8px_16px_rgba(88,123,109,0.2)] flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.98] transition-all" id="btn-submit" onclick="handleSubmit()" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Enviar Solicitud de Reasignación</span>
+</button>
+<button class="w-full h-[48px] rounded-full bg-surface-container-low text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center justify-center" onclick="history.back()" type="button">
+      Mantener mi Equipo Actual (Cancelar)
+    </button>
+</section>
+<!-- Respaldo Legal y Confidencialidad Clínica (SRS-NFU-001) -->
+<footer class="pt-space-xs pb-space-md text-center space-y-1.5 px-4">
+<div class="flex items-center justify-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[16px]">health_and_safety</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">SRS-NFU-001 • Privacidad de Datos Clínicos</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline leading-tight">
+      Procedimiento amparado por la Ley de Derechos y Deberes del Paciente (Ley 20.584). El ejercicio de este derecho no genera registro de demérito ni condiciona tu atención en la red de salud.
+    </p>
+</footer>
+<!-- Modal de confirmación empática (oculto por defecto) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs flex items-center justify-center p-space-md opacity-0 pointer-events-none transition-opacity duration-200" id="confirmation-dialog">
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-2xl max-w-sm w-full space-y-space-sm transform scale-95 transition-transform duration-200" id="dialog-content">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[26px]">mark_email_read</span>
+</div>
+<div class="text-center space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Solicitud Recibida</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Hemos registrado tu solicitud de cambio con total confidencialidad. Tu coordinación clínica revisará los antecedentes en un plazo máximo de 72 horas.
+        </p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-DEFAULT text-center">
+<p class="font-label-sm text-label-sm text-primary font-medium">Tus recetas y horas activas continúan vigentes.</p>
+</div>
+<button class="w-full h-12 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-sm" onclick="closeConfirmation()" type="button">
+        Entendido, volver al inicio
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Contador de caracteres para el textarea empático
+  function handleCharCount(textarea) {
+    const counter = document.getElementById('char-counter');
+    const currentLength = textarea.value.length;
+    counter.textContent = `${currentLength} / 300`;
+  }
+
+  // Selección visual de radio para especialidades
+  function selectRadio(element, groupClass) {
+    const buttons = document.querySelectorAll(`.${groupClass}`);
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-primary-fixed/30', 'text-on-surface');
+      btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      const icon = btn.querySelector('.radio-icon');
+      if (icon) {
+        icon.textContent = 'radio_button_unchecked';
+        icon.classList.remove('text-primary');
+        icon.classList.add('text-outline');
+        icon.style.fontVariationSettings = "'FILL' 0";
+      }
+    });
+
+    element.classList.add('bg-primary-fixed/30', 'text-on-surface');
+    element.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+    const icon = element.querySelector('.radio-icon');
+    if (icon) {
+      icon.textContent = 'radio_button_checked';
+      icon.classList.add('text-primary');
+      icon.classList.remove('text-outline');
+      icon.style.fontVariationSettings = "'FILL' 1";
+    }
+  }
+
+  // Selección de motivos (radio estándar con feedback sereno)
+  function updateRadioStyles() {
+    const labels = document.querySelectorAll('.reason-label');
+    labels.forEach(label => {
+      const radio = label.querySelector('input[type="radio"]');
+      const icon = label.querySelector('.icon-check');
+      const text = label.querySelector('span:last-child');
+      
+      if (radio && radio.checked) {
+        label.classList.remove('bg-surface-container-low');
+        label.classList.add('bg-primary-fixed/20');
+        icon.textContent = 'check_circle';
+        icon.classList.remove('text-outline');
+        icon.classList.add('text-primary');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        text.classList.remove('text-on-surface-variant');
+        text.classList.add('text-on-surface');
+      } else {
+        label.classList.add('bg-surface-container-low');
+        label.classList.remove('bg-primary-fixed/20');
+        icon.textContent = 'radio_button_unchecked';
+        icon.classList.add('text-outline');
+        icon.classList.remove('text-primary');
+        icon.style.fontVariationSettings = "'FILL' 0";
+        text.classList.add('text-on-surface-variant');
+        text.classList.remove('text-on-surface');
+      }
+    });
+  }
+
+  // Toggle para chips de preferencias opcionales
+  function toggleTag(button) {
+    const isSelected = button.classList.contains('bg-primary-fixed/40');
+    if (isSelected) {
+      button.classList.remove('bg-primary-fixed/40', 'text-on-primary-fixed');
+      button.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+    } else {
+      button.classList.add('bg-primary-fixed/40', 'text-on-primary-fixed');
+      button.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+    }
+  }
+
+  // Manejador del modal de envío
+  function handleSubmit() {
+    const dialog = document.getElementById('confirmation-dialog');
+    const content = document.getElementById('dialog-content');
+    dialog.classList.remove('opacity-0', 'pointer-events-none');
+    dialog.classList.add('opacity-100');
+    content.classList.remove('scale-95');
+    content.classList.add('scale-100');
+  }
+
+  function closeConfirmation() {
+    const dialog = document.getElementById('confirmation-dialog');
+    const content = document.getElementById('dialog-content');
+    dialog.classList.add('opacity-0', 'pointer-events-none');
+    dialog.classList.remove('opacity-100');
+    content.classList.add('scale-95');
+    content.classList.remove('scale-100');
+    setTimeout(() => {
+      history.back();
+    }, 250);
+  }
+
+  // Soporte fluido de Drag-to-Scroll en desktop/touch
+  (function initDragScroll() {
+    let isDown = false;
+    let startY;
+    let scrollTop;
+    const container = window;
+
+    window.addEventListener('mousedown', (e) => {
+      if (['BUTTON', 'TEXTAREA', 'INPUT', 'LABEL', 'A'].includes(e.target.tagName)) return;
+      isDown = true;
+      startY = e.pageY - document.documentElement.scrollTop;
+      scrollTop = document.documentElement.scrollTop;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const y = e.pageY - document.documentElement.scrollTop;
+      const walk = (y - startY) * 1.5;
+      document.documentElement.scrollTop = scrollTop - walk;
+    });
+  })();
+</script></main>  <script src="../../scripts/navigation.js"></script>
+</body></html>
