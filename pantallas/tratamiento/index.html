@@ -327,12 +327,13 @@
 </div>
 </section>
 </main>
-<!-- Botón Flotante Persistente SOS Crisis -->
-<div class="fixed bottom-20 right-4 z-40">
-<button aria-label="S.O.S Crisis" class="h-13 px-4 py-2.5 rounded-full bg-error text-on-error font-bold text-sm shadow-lg shadow-error/30 flex items-center gap-2 active:scale-95 transition-all hover:bg-red-700" onclick="triggerCrisisAction()">
-<span class="material-symbols-outlined text-[22px] animate-pulse">crisis_alert</span>
-<span class="">S.O.S Crisis</span>
-</button>
+<!-- Botón persistente S.O.S Crisis con pointer-events-none en wrapper y pointer-events-auto en enlace -->
+<aside class="fixed bottom-24 right-margin z-50 pointer-events-none">
+<a class="pointer-events-auto flex items-center gap-2 pl-3 pr-4 h-12 bg-error text-on-error rounded-full shadow-[0_12px_28px_rgba(186,26,26,0.35)] active:scale-95 transition-transform duration-200" data-path="soporte-crisis" href="#" title="Botón de emergencia y soporte de crisis">
+<span class="material-symbols-outlined text-[20px]">emergency</span>
+<span class="font-label-lg text-label-lg tracking-wide font-semibold">S.O.S Crisis</span>
+</a>
+</aside>
 </div>
 <!-- Barra Inferior de Navegación Persistente -->
 <nav class="fixed bottom-0 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-lg border-t border-surface-container px-4 py-2 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">

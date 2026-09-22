@@ -459,13 +459,6 @@
 </section>
 </main>
 <script>
-  // ==========================================
-  // SCROLL NATIVO Y SOPORTE RUEDA / DRAG
-  // ==========================================
-  window.addEventListener('wheel', (e) => {
-    window.scrollBy({ top: e.deltaY, behavior: 'auto' });
-  }, { passive: true });
-
   // Arrastre por ratón (Drag to scroll) para facilitar navegación en escritorio/iframe
   let isPointerDown = false;
   let startY = 0;

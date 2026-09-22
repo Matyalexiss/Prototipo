@@ -15,11 +15,11 @@ Prototipo navegable de la aplicación de monitoreo de bienestar.
 | Ruta | Pantalla |
 | --- | --- |
 | Inicio | `index.html` |
-| PROMs | `pantallas/proms-01/index.html` |
-| Red de apoyo | `pantallas/red-apoyo-01/index.html` |
-| Tratamiento | `pantallas/tratamiento-01/index.html` |
-| Perfil | `pantallas/perfil-01/index.html` |
-| S.O.S. Crisis | `pantallas/crisis-sos-01/index.html` |
-| Espacio de calma | `pantallas/contencion-01/index.html` |
+| PROMs | `pantallas/proms/index.html` |
+| Red de apoyo | `pantallas/red-apoyo/index.html` |
+| Tratamiento | `pantallas/tratamiento/index.html` |
+| Perfil | `pantallas/perfil/index.html` |
+| S.O.S. Crisis | `pantallas/crisis-sos/index.html` |
+| Espacio de calma | `pantallas/contencion/index.html` |
 
 El prototipo funciona abriendo `index.html` directamente en el navegador. Las tipografías, iconos y algunas imágenes de las exportaciones requieren conexión a Internet.
