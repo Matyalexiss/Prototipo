@@ -1,4 +1,4 @@
-# MenteSerena
+# Sistema de salud mental
 
 Prototipo navegable de la aplicación de monitoreo de bienestar.
 
